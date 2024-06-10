@@ -1,13 +1,16 @@
 [tool.poetry]
-name = "kvault"
+name = "coursehub"
 version = "0.1.0"
-description = "Simple Miniature key-value datastore"
+description = "Simple Course hub application"
 authors = ["BrianLusina <12752833+BrianLusina@users.noreply.github.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.12"
 gevent = ">=23.7,<25.0"
+flask = "^3.0.3"
+sanctumlabs-dbkit = "^1.0.0"
+flask-injector = "^0.15.0"
 
 [tool.poetry.dev-dependencies]
 pylint = "^3.2.2"
