@@ -1,11 +1,11 @@
 from sanctumlabs_dbkit.sql import SessionLocal
-from .database import make_engine
-import os
+from .database.database import make_engine
+from .settings import Settings
 
-def bootstrap(database_url: str) -> None:
+def bootstrap(settings: Settings) -> None:
     # init_sentry(settings)
 
-    SessionLocal.configure(bind=make_engine(database_url))
+    SessionLocal.configure(bind=make_engine(settings.database_url))
 
     # configure_logging(settings)
     # configure_caching(settings)

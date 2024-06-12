@@ -5,7 +5,8 @@ from sqlalchemy import String
 
 
 class Course(BaseModel):
-    """Course model represents a model for a course.
+    """
+    Course model represents a model for a course.
     """
 
     # The name of the course

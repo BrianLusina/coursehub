@@ -2,9 +2,9 @@
 install:
 	poetry install
 
-# Runs application
-run:
-	python asgi_server.py
+# Runs course application
+run-course:
+	uvicorn course.main:app --reload --host 0.0.0.0 --port 5001
 
 # Runs the application with reload flag set
 run-reload:
