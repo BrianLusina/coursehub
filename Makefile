@@ -6,9 +6,9 @@ install:
 run-course:
 	uvicorn course.main:app --reload --host 0.0.0.0 --port 5001
 
-# Runs the application with reload flag set
-run-reload:
-	uvicorn app:app --port 5000 --reload
+# Runs user application
+run-user:
+	uvicorn users.main:app --reload --host 0.0.0.0 --port 5002
 
 # Runs tests
 test:

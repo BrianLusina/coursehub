@@ -1,4 +1,4 @@
-from typing import Any, Generator, Optional, Annotated
+from typing import Any, Generator, Annotated
 
 from fastapi import Depends
 
@@ -6,7 +6,7 @@ from sqlalchemy import Engine
 from sanctumlabs_dbkit.sql import SessionLocal
 from sanctumlabs_dbkit.sql.session import Session
 
-from course.database import db_engine
+from common.database import db_engine
 
 
 DBEngineDep = Annotated[Engine, Depends(db_engine)]
