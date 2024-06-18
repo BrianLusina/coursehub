@@ -2,7 +2,7 @@ from flask_login import LoginManager
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os
-from users.models import User
+from usersapi.models import User
 # init SQLAlchemy so we can use it later in our models
 db = SQLAlchemy()
 

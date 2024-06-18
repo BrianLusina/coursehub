@@ -1,7 +1,7 @@
 from typing import Annotated
 from fastapi import Depends
 
-from course.repositories import CourseRepository
+from courses.repositories import CourseRepository
 from common.di.database_providers import DBSessionDep
 
 

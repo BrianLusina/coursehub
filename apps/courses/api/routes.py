@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
-from course.api.course_api import course_router
-from course.api.monitoring_routes import monitoring_router
+from courses.api.course_api import course_router
+from courses.api.monitoring_routes import monitoring_router
 
 
 router = APIRouter()

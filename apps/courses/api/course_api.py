@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from course.di import CourseRepositoryDep
+from courses.di import CourseRepositoryDep
 
 
 course_router = APIRouter(prefix="/api/course")

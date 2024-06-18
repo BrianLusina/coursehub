@@ -3,7 +3,7 @@ from typing import Optional
 from sqlalchemy import Engine
 from common.database import make_engine
 
-from course.settings import CourseAppSettingsDep
+from courses.settings import CourseAppSettingsDep
 
 _engine: Optional[Engine] = None
 

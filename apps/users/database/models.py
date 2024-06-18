@@ -4,7 +4,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import String
 
 
-class User(BaseModel):
+class UserModel(BaseModel):
     email: Mapped[str] = mapped_column(String(length=100), unique=True)
 
     password: Mapped[str] = mapped_column(String(length=100))

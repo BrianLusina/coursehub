@@ -2,9 +2,9 @@ from contextlib import asynccontextmanager
 from typing import AsyncGenerator
 
 from fastapi import FastAPI
-from course.api.routes import router
-from course.settings import get_course_app_settings
-from course import bootstrap
+from courses.api.routes import router
+from courses.settings import get_course_app_settings
+from courses import bootstrap
 
 def create_course_app() -> FastAPI:
     @asynccontextmanager
