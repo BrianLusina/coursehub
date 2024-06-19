@@ -1,8 +1,8 @@
 from typing import Annotated
 from fastapi import Depends
 
-from users.domain import CreateUser
-from users.di.repository_providers import UserRepositoryDep
+from apps.users.domain import CreateUser
+from apps.users.di.repository_providers import UserRepositoryDep
 
 
 def create_user_dep(user_repo: UserRepositoryDep) -> CreateUser:

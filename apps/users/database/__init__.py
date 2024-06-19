@@ -2,7 +2,7 @@ from typing import Optional
 
 from sqlalchemy import Engine
 from common.database import make_engine
-from users.settings import UserSettingsDep
+from apps.users.settings import UserSettingsDep
 
 from .users_repository import UserRepository
 

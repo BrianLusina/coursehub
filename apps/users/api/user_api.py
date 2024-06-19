@@ -1,7 +1,9 @@
 from typing import Annotated
 from fastapi import APIRouter, Form
-from users.di import CreateUserDep
-from users.domain import CreateUserRequest
+from starlette.status import HTTP_201_CREATED, HTTP_400_BAD_REQUEST
+
+from apps.users.di.domain_providers import CreateUserDep
+from apps.users.domain import CreateUserRequest
 
 
 user_router = APIRouter(prefix="/api/users")
@@ -22,8 +24,17 @@ async def signup(
     
     try:
         created_user = await create_user.execute(create_user_request)
-    except Exception:
-        pass
+        return {
+            "status": HTTP_201_CREATED,
+            "data": created_user,
+            "message": "Successfully created user"
+        }
+    except Exception as exc:
+        return {
+            "status": HTTP_400_BAD_REQUEST,
+            "message": "Failed to create user",
+            "error": exc
+        }
     # email = request.form.get('email')
     # name = request.form.get('name')
     # password = request.form.get('password')
@@ -40,7 +51,7 @@ async def signup(
 
 
 @user_router.post('/login')
-def login(user_repository: UserRepositoryDep):
+def login(user_repository):
     users = user_repository.find_all()
     data = []
     for course in users:
@@ -49,7 +60,7 @@ def login(user_repository: UserRepositoryDep):
 
 
 @user_router.get('/')
-def users(user_repository: UserRepositoryDep):
+def users(user_repository):
     users = user_repository.find_all()
     data = []
     for course in users:

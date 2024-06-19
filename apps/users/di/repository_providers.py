@@ -1,7 +1,7 @@
 from typing import Annotated
 from fastapi import Depends
 
-from users.database import UserRepository
+from apps.users.database import UserRepository
 from common.di.database_providers import DBSessionDep
 
 

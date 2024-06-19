@@ -2,9 +2,9 @@ from contextlib import asynccontextmanager
 from typing import AsyncGenerator
 
 from fastapi import FastAPI
-from users.api.routes import router
-from users.settings import get_user_settings
-from users import bootstrap
+from apps.users.api.routes import router
+from apps.users.settings import get_user_settings
+from apps.users import bootstrap
 
 def create_user_app() -> FastAPI:
     @asynccontextmanager

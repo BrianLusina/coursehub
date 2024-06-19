@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from pydantic import EmailStr, StringConstraints
 import bcrypt
 
-from users.di import UserRepositoryDep
+from apps.users.di.repository_providers import UserRepositoryDep
 from shared.domain.usecase import UseCase
 from .entities import User
 
@@ -45,7 +45,7 @@ class CreateUser(UseCase):
                 email=request.email,
                 password=request.hashed_password
             )
-            created_user = self.user_repository.create(user)
+            created_user = await self.user_repository.create(user)
             return created_user
-        except Exception:
-            pass
+        except Exception as exc:
+            raise exc
