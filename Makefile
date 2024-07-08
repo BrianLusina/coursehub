@@ -26,3 +26,15 @@ lint:
 
 load-test:
 	locust --config .locust.conf
+
+migrate-up: ## migrate schema up
+	alembic upgrade head
+.PHONY: migrate-up
+
+migrate-down: ## migrate schema down
+	alembic downgrade base
+.PHONY: migrate-down
+
+migrate-revision: ## Adds a revision to a migration
+	alembic revision --autogenerate -m "$(ARGS)"
+.PHONY: migrate-revision

@@ -4,6 +4,14 @@ from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
 from alembic import context
+from alembic.script import write_hooks
+
+from alembic import context
+from apps.courses.settings import CourseAppSettings
+from apps.users.settings import UserAppSettings
+
+user_settings = UserAppSettings()
+course_settings = CourseAppSettings()
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

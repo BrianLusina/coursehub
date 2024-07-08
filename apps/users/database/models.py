@@ -5,7 +5,6 @@ from sqlalchemy import String
 from sanctumlabs_dbkit.sql import BaseModel
 
 from apps.users.domain.entities.user import User
-from common.utils import entity_to_orm_dict
 
 
 class Users(BaseModel):

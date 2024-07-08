@@ -1,4 +1,4 @@
-from courses.repositories.course_repository import CourseRepository
+from apps.courses.repositories.course_repository import CourseRepository
 
 __all__ = [
     "CourseRepository"

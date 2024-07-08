@@ -3,9 +3,12 @@ services:
     container_name: coursehub-db
     image: postgres:16.3-alpine
     environment:
-      - POSTGRES_DB=coursehub-db
       - POSTGRES_USER=coursehub
       - POSTGRES_PASSWORD=coursehub
+      - POSTGRES_MULTIPLE_DATABASES=usersdb,coursesdb
+    volumes:
+      - ./scripts:/docker-entrypoint-initdb.d
+      - db:/var/lib/postgresql/data
     ports:
       - 5432:5432
     networks:
@@ -14,3 +17,6 @@ services:
 networks:
   coursehubnet:
     name: coursehubnet
+
+volumes:
+  db:
