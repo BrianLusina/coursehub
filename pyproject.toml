@@ -19,7 +19,7 @@ python-multipart = "^0.0.20"
 nanoid = "^2.0.0"
 pydantic-extra-types = "^2.10.4"
 bcrypt = "^4.3.0"
-alembic = "^1.15.2"
+alembic = "^1.16.1"
 
 [tool.poetry.dev-dependencies]
 pylint = "^3.3.7"
