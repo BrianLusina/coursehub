@@ -1095,14 +1095,14 @@ semver = ["semver (>=3.0.2)"]
 
 [[package]]
 name = "pydantic-settings"
-version = "2.13.0"
+version = "2.13.1"
 description = "Settings management using Pydantic"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "pydantic_settings-2.13.0-py3-none-any.whl", hash = "sha256:d67b576fff39cd086b595441bf9c75d4193ca9c0ed643b90360694d0f1240246"},
-    {file = "pydantic_settings-2.13.0.tar.gz", hash = "sha256:95d875514610e8595672800a5c40b073e99e4aae467fa7c8f9c263061ea2e1fe"},
+    {file = "pydantic_settings-2.13.1-py3-none-any.whl", hash = "sha256:d56fd801823dbeae7f0975e1f8c8e25c258eb75d278ea7abb5d9cebb01b56237"},
+    {file = "pydantic_settings-2.13.1.tar.gz", hash = "sha256:b4c11847b15237fb0171e1462bf540e294affb9b86db4d9aa5c01730bdbe4025"},
 ]
 
 [package.dependencies]
@@ -1635,4 +1635,4 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "8dca0b7460cf2e5c69b1d30674724569d9e678974ec1dbc5bb68fa65bdc9cff0"
+content-hash = "d55331d031f62beb09f229ff840adf32cbea0664fab82f1ffb62eb9fa29ddec6"
